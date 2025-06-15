@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyGpt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="left">Chat History (todo)</aside>
+    <main class="center">
+      <textarea id="systemPrompt" rows="3"></textarea>
+      <div id="chat"></div>
+      <form id="chatForm">
+        <input type="text" id="userInput" autocomplete="off" />
+        <button type="submit">Send</button>
+        <button type="button" id="getCode">Get Code</button>
+      </form>
+      <pre id="codeBox" style="display:none"></pre>
+    </main>
+    <aside class="right">
+      <label>Model
+        <select id="model">
+          <option value="Gemini">Gemini</option>
+          <option value="DeepSeek">DeepSeek</option>
+        </select>
+      </label>
+      <label>Temperature <input type="range" id="temp" min="0" max="1" step="0.1" value="0.7"></label>
+      <label>Top-P <input type="range" id="topP" min="0" max="1" step="0.1" value="1"></label>
+      <label>Top-K <input type="number" id="topK" min="0" max="100" value="40"></label>
+      <label>Max Output <input type="number" id="maxOut" min="16" max="2048" value="256"></label>
+      <button id="toggleTheme">Toggle Theme</button>
+    </aside>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
