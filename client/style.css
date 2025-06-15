@@ -1,16 +1,23 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #1b2735 0%, #090a0f 100%);
+  perspective: 800px;
+  overflow: hidden;
 }
 .container {
   display: grid;
   grid-template-columns: 200px 1fr 200px;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 .left, .right {
   padding: 10px;
   background: var(--sidebar-bg);
   color: var(--text-color);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
 }
 .center {
   display: flex;
@@ -18,6 +25,16 @@ body {
   padding: 10px;
   background: var(--bg);
   color: var(--text-color);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 #chat {
   flex: 1;
