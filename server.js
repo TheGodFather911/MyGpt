@@ -24,7 +24,7 @@ let conversations = {};
 // Helper to fetch API key based on model
 function getApiKey(model) {
   if (model === 'Gemini') return process.env.GEMINI_API_KEY || '';
-  if (model === 'DeepSeek') return process.env.DEEPSEEK_API_KEY || '';
+  if (model === 'OpenRouter') return process.env.OPENROUTER_API_KEY || '';
   return '';
 }
 
