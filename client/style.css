@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  height: 100vh;
+}
+.left, .right {
+  padding: 10px;
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: var(--bg);
+  color: var(--text-color);
+}
+#chat {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+#chat div {
+  margin-bottom: 5px;
+}
+.light {
+  --bg: #fff;
+  --text-color: #000;
+  --sidebar-bg: #eee;
+}
+.dark {
+  --bg: #1e1e1e;
+  --text-color: #f0f0f0;
+  --sidebar-bg: #2e2e2e;
+}
